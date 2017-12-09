@@ -1,6 +1,5 @@
 package com.rkovtiuk.timelast.common.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -13,7 +12,7 @@ public class Tweet {
 
     @Id private String id;
     @Field("created_at") private Date createdAt;
-    private Long user;
+    @Field("account") private String userNickname;
     private String text;
     private Long likes;
     private Long comments;
@@ -34,12 +33,12 @@ public class Tweet {
         this.createdAt = createdAt;
     }
 
-    public Long getUser() {
-        return user;
+    public String getUserNickname() {
+        return userNickname;
     }
 
-    public void setUser(Long user) {
-        this.user = user;
+    public void setUser(String userNickname) {
+        this.userNickname = userNickname;
     }
 
     public String getText() {

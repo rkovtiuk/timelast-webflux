@@ -1,6 +1,6 @@
 package com.rkovtiuk.timelast.handler;
 
-import com.rkovtiuk.timelast.common.entity.User;
+import com.rkovtiuk.timelast.entity.User;
 import com.rkovtiuk.timelast.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

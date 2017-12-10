@@ -1,4 +1,4 @@
-package com.rkovtiuk.timelast.common.entity;
+package com.rkovtiuk.timelast.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

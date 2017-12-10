@@ -1,4 +1,4 @@
-package com.rkovtiuk.timelast.route;
+package com.rkovtiuk.timelast.web.route;
 
 import com.rkovtiuk.timelast.handler.TweetHandler;
 import org.springframework.context.annotation.Bean;
@@ -19,9 +19,10 @@ public class TweetRoute {
     @Bean
     public RouterFunction<ServerResponse> route(TweetHandler handler) {
         return RouterFunctions
-                .route(GET("/quotes").and(accept(APPLICATION_JSON)), handler::all)
-                .andRoute(GET("/quotes/{id}").and(accept(APPLICATION_JSON)), handler::one)
-                .andRoute(POST("/quotes").and(accept(APPLICATION_JSON).and(contentType(APPLICATION_JSON))), handler::save);
+                .route(GET("/tweets").and(accept(APPLICATION_JSON)), handler::all)
+                .andRoute(GET("/tweets/test").and(accept(APPLICATION_JSON).and(contentType(APPLICATION_JSON))), handler::test)
+                .andRoute(GET("/tweets/{id}").and(accept(APPLICATION_JSON)), handler::one)
+                .andRoute(POST("/tweets").and(accept(APPLICATION_JSON).and(contentType(APPLICATION_JSON))), handler::save);
     }
 
 }

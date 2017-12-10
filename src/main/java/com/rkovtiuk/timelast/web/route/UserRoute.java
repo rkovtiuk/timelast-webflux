@@ -1,4 +1,4 @@
-package com.rkovtiuk.timelast.route;
+package com.rkovtiuk.timelast.web.route;
 
 import com.rkovtiuk.timelast.handler.UserHandler;
 import org.springframework.context.annotation.Bean;

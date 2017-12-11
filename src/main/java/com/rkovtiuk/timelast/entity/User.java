@@ -2,13 +2,14 @@ package com.rkovtiuk.timelast.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "users")
 public class User {
 
     @Id private String id;
     private String nickname;
-    private String fullname;
+    @Field("full_name") private String fullName;
 
     public String getId() {
         return id;
@@ -26,11 +27,11 @@ public class User {
         this.nickname = nickname;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullName(String fullname) {
+        this.fullName = fullname;
     }
 }

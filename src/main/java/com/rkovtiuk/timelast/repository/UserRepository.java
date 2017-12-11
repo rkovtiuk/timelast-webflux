@@ -8,5 +8,6 @@ import reactor.core.publisher.Mono;
 
 @Repository
 public interface UserRepository extends ReactiveMongoRepository<User, String> {
-    Publisher<Void> save(Mono<User> user);
+    Mono<Void> save(Mono<User> user);
+    Mono<Void> save(User user);
 }

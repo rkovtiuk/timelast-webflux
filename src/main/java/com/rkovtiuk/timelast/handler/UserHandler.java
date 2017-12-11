@@ -23,4 +23,10 @@ public class UserHandler {
         return ServerResponse.ok().build(this.repository.save(user));
     }
 
+    public Mono<ServerResponse> create(ServerRequest request) {
+        User user = new User();
+        user.setNickname("qa_test_accaount");
+        user.setFullName("QA Test");
+        return ServerResponse.ok().build(this.repository.save(user));
+    }
 }
